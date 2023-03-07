@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:09:16 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/03 14:05:41 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:41:49 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	check_args(int argc, char **argv)
 	char	**args;	
 
 	i = 0;
-	if (argc == 2)
+	if (argc > 2)
 		args = ft_split(argv[1], ' ');
 	else
 	{
@@ -80,5 +80,5 @@ void	check_args(int argc, char **argv)
 		i++;
 	}
 	if (argc == 2)
-		ps_free(args);
+		write(2, "\n", 1);
 }
