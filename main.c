@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:46:30 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/07 14:43:26 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:06:48 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,8 @@ int	main(int argc, char **argv)
 	*stack_a = NULL;
 	*stack_b = NULL;
 	init_stack(stack_a, argc, argv);
-	if (is_sorted(stack_a))
-	{
-		free_stack(stack_a);
-		free_stack(stack_b);
-		return (0);
-	}
+	if (is_sorted(stack_a) == 1)
+		exit (0);
 	sort_stack(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);

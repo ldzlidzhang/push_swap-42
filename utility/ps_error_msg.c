@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 14:39:24 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/07 13:12:04 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:11:09 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ps_error(char *msg)
 {
-	while (*msg)
-	{
-		write(2, msg, 1);
-		msg++;
-	}
-	write(2, "\n", 1);
+	(void)msg;
+	write(2, "Error\n", 6);
 	exit(0);
 }
 

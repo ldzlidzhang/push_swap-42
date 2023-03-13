@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:35:42 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/07 14:07:49 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:01:37 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <errno.h>
 # include <fcntl.h>
+# include <limits.h>
 
 /* utility */
 typedef struct s_list

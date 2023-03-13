@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:09:16 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/07 14:54:40 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:26:53 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ static int	ft_isnum(char *num)
 	i = 0;
 	if (num[0] == '-')
 		i++;
+	if (num[0] == '-' && !num[1])
+		return (0);
 	while (num[i])
 	{
 		if (!ft_isdigit(num[i]))
@@ -74,9 +76,9 @@ void	check_args(int argc, char **argv)
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]))
 			ps_error("Error");
-		if (ft_contains(tmp, args, i))
+		if (ft_contains(tmp, args, i) == 1)
 			ps_error("Error");
-		if (tmp < -2147483648 || tmp > 2147483647)
+		if (tmp < INT32_MIN || tmp > 2147483647)
 			ps_error("Error");
 		i++;
 	}
