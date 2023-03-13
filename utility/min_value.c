@@ -6,7 +6,7 @@
 /*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 14:14:31 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/02/28 14:14:57 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/03/13 22:21:57 by lidanzhang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,18 @@ void	index_stack(t_list **stack)
 		head->index = index++;
 		head = get_next_min(stack);
 	}
+}
+
+int	is_sorted(t_list **stack)
+{
+	t_list	*head;
+
+	head = *stack;
+	while (head && head->next)
+	{
+		if (head->value > head->next->value)
+			return (0);
+		head = head->next;
+	}
+	return (1);
 }

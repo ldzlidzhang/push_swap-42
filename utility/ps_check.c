@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:09:16 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/13 14:30:07 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/14 00:34:40 by lidanzhang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,12 @@ static int	ft_isnum(char *num)
 	return (1);
 }
 
-int	is_sorted(t_list **stack)
+static char	**argc2(char *av)
 {
-	t_list	*head;
+	char	**args;
 
-	head = *stack;
-	while (head && head->next)
-	{
-		if (head->value > head->next->value)
-			return (0);
-		head = head->next;
-	}
-	return (1);
+	args = ft_split(av, ' ');
+	return (args);
 }
 
 void	check_args(int argc, char **argv)
@@ -62,15 +56,11 @@ void	check_args(int argc, char **argv)
 	long	tmp;
 	char	**args;	
 
-	i = 0;
-	args = ft_split(argv[1], ' ');
-	if (argc == 2 && !ft_isnum(argv[1]))
-		ps_error("Error");
+	i = 1;
+	if (argc == 2)
+		args = argc2(argv[1]);
 	else
-	{
-		i = 1;
 		args = argv;
-	}
 	while (args[i])
 	{
 		tmp = ft_atoi(args[i]);
@@ -82,4 +72,34 @@ void	check_args(int argc, char **argv)
 			ps_error("Error");
 		i++;
 	}
+	if (argc == 2)
+		ps_free(args);
 }
+
+// void	check_args(int argc, char **argv)
+// {
+// 	int		i;
+// 	long	tmp;
+// 	char	**args;	
+
+// 	i = 0;
+// 	args = ft_split(argv[1], ' ');
+// 	if (argc == 2 && !ft_isnum(argv[1]))
+// 		ps_error("Error");
+// 	else
+// 	{
+// 		i = 1;
+// 		args = argv;
+// 	}
+// 	while (args[i])
+// 	{
+// 		tmp = ft_atoi(args[i]);
+// 		if (!ft_isnum(args[i]))
+// 			ps_error("Error");
+// 		if (ft_contains(tmp, args, i) == 1)
+// 			ps_error("Error");
+// 		if (tmp < INT32_MIN || tmp > 2147483647)
+// 			ps_error("Error");
+// 		i++;
+// 	}
+// }

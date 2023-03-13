@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_error_msg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 14:39:24 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/13 13:22:16 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/14 00:25:39 by lidanzhang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ps_free(char **str)
 		i++;
 	while (i >= 0)
 		free(str[i--]);
+	free(str);
 }
 
 void	free_stack(t_list **stack)
