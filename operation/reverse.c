@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:16:34 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/02/28 15:18:24 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/03/13 14:20:24 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	rra(t_list **stack_a)
 {
 	if (reverse(stack_a) == -1)
 		return (-1);
-	ft_putendl_fd("rra", 1);
+	write(1, "rra\n", 4);
 	return (0);
 }
 
@@ -47,7 +47,7 @@ int	rrb(t_list **stack_b)
 {
 	if (reverse(stack_b) == -1)
 		return (-1);
-	ft_putendl_fd("rrb", 1);
+	write(1, "rrb\n", 4);
 	return (0);
 }
 
@@ -57,6 +57,6 @@ int	rrr(t_list **stack_a, t_list **stack_b)
 		return (-1);
 	reverse(stack_a);
 	reverse(stack_b);
-	ft_putendl_fd("rrr", 1);
+	write(1, "rrr\n", 4);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:11:51 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/02/28 15:14:11 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/03/13 14:19:12 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	pa(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_a, stack_b) == -1)
 		return (-1);
-	ft_putendl_fd("pa", 1);
+	write(1, "pa\n", 3);
 	return (0);
 }
 
@@ -51,6 +51,6 @@ int	pb(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_b, stack_a) == -1)
 		return (-1);
-	ft_putendl_fd("pb", 1);
+	write(1, "pb\n", 3);
 	return (0);
 }

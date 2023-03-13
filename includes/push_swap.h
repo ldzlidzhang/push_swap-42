@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:35:42 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/13 11:01:37 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 14:30:02 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ t_list	*ft_lstlast(t_list *head);
 size_t	ft_strlen(const char *str);
 void	ft_lstadd_front(t_list **stack, t_list *new);
 void	ft_lstadd_back(t_list **stack, t_list *new);
-void	printlist(t_list *head);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int nb, int fd);
-void	ft_putendl_fd(char *s, int fd);
 void	index_stack(t_list **stack);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ps_error(char *msg);

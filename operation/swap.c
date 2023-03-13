@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:19:53 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/07 14:35:10 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 14:22:03 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	sa(t_list **stack_a)
 {
 	if (swap(stack_a) == -1)
 		return (-1);
-	ft_putendl_fd("sa", 1);
+	write(1, "sa\n", 3);
 	return (0);
 }
 
@@ -46,7 +46,7 @@ int	sb(t_list **stack_b)
 {
 	if (swap(stack_b) == -1)
 		return (-1);
-	ft_putendl_fd("sb", 1);
+	write(1, "sb\n", 3);
 	return (0);
 }
 
@@ -56,6 +56,6 @@ int	ss(t_list **stack_a, t_list **stack_b)
 		return (-1);
 	swap(stack_a);
 	swap(stack_b);
-	ft_putendl_fd("ss", 1);
+	write(1, "ss\n", 3);
 	return (0);
 }

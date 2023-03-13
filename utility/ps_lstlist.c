@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_lstlist.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:57:13 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/02/28 12:03:41 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/03/13 14:29:52 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,4 @@ int	ft_lstsize(t_list *head)
 		i++;
 	}
 	return (i);
-}
-
-void	printlist(t_list *head)
-{
-	t_list	*tmp;
-
-	tmp = head;
-	while (tmp != NULL)
-	{
-		ft_putnbr_fd(tmp->value, 1);
-		ft_putendl_fd("", 1);
-		tmp = tmp->next;
-	}
 }

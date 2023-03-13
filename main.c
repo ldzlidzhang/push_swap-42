@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:46:30 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/13 13:06:48 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 15:25:24 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ int	main(int argc, char **argv)
 		return (-1);
 	check_args(argc, argv);
 	stack_a = (t_list **)malloc(sizeof(t_list));
-	stack_b = (t_list **)malloc(sizeof(t_list));
 	*stack_a = NULL;
-	*stack_b = NULL;
 	init_stack(stack_a, argc, argv);
 	if (is_sorted(stack_a) == 1)
-		exit (0);
+		exit (EXIT_SUCCESS);
+	stack_b = (t_list **)malloc(sizeof(t_list));
+	*stack_b = NULL;
 	sort_stack(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
