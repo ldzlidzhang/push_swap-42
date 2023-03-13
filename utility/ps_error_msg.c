@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 14:39:24 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/13 13:11:09 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:22:16 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ps_error(char *msg)
 {
 	(void)msg;
 	write(2, "Error\n", 6);
-	exit(0);
+	exit(EXIT_FAILURE);
 }
 
 void	ps_free(char **str)

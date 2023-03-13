@@ -6,7 +6,7 @@
 /*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:09:16 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/03/13 11:26:53 by lidzhang         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:35:55 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ static int	ft_isnum(char *num)
 	int	i;
 
 	i = 0;
-	if (num[0] == '-')
+	if (num[0] == '-' || num[0] == '+')
 		i++;
-	if (num[0] == '-' && !num[1])
+	if ((num[0] == '-' || num[0] == '+') && !num[1])
 		return (0);
 	while (num[i])
 	{
